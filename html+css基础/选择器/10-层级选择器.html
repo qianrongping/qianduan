@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 层级选择器要有层级关系，根据层级关系获取子标签，给予子标签添加样式 */
+        div div{
+            color: green;
+        }
+
+        div .box2{
+            color: blue;
+        }
+
+        /* div div p{
+            color: red;
+        } */
+
+        div p{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>绿色</div>
+
+        <div class="box2">蓝色</div>
+
+        <div>
+            <p>天蓝色</p>
+        </div>
+        
+    </div>
+    <div>嘻嘻</div>
+</body>
+</html>

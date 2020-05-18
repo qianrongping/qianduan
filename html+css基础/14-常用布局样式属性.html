@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background: greenyellow;
+            /* 设置背景图片，不重复显示，拉伸当前显示的图片 */
+            /* background: url(logo.jpg) no-repeat; */
+            /* 设置标签的四周边框 */
+            border: 5px solid red;
+            /* border-top: 5px, solid red;
+            border-left: 5px, solid red;
+            border-right: 5px, solid red;
+            border-bottom: 5px, solid red; */
+        }
+
+        .box1{
+            width: 200px;
+            height: 200px;
+            background: blue;
+        }
+
+        .box2{
+            width: 50px;
+            height: 50px;
+            background: green;
+            /* 设置浮动 */
+            float: left;
+        }
+
+        .box3{
+            width: 50px;
+            height: 50px;
+            background: red;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <!-- 布局常用控件是div -->
+    <div class="box">哈哈</div>
+
+    <br>
+    <div class="box1">
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>
