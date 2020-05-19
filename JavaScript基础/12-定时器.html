@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // function fnShow(name,age){
+        //     alert('ok'+name+age);
+        //     alert(tid);
+        //     // 定时器执行完后需要销毁
+        //     clearTimeout(tid);
+        // }
+        // // 根据时间间隔调用一次函数的定时器
+        // // 1. 定时器要执行的函数
+        // // 2. 时间间隔
+        // // 3. 参数，多个参数使用逗号进行分割
+        // //  返回值表示创建定时器返回的id，通俗理解就是创建的第几个定时器
+        // var tid = setTimeout(fnShow,2000,'李四',20)
+
+        function fnShowInfo(){
+            alert('ok')
+    
+        }
+
+        function fnStop(){
+            // 销毁定时器
+            clearInterval(tid1);
+        }
+        // 根据时间间隔重复执行函数的定时器
+        var tid1 = setInterval(fnShowInfo,2000)
+    </script>
+</head>
+<body>
+    <input type="button" value="停止" onclick="fnStop()">
+</body>
+</html>

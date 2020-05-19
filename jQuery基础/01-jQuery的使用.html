@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 导入jQuery对应的js文件 -->
+    <script src="js/jquery-1.12.4.js"></script>
+
+    <script>
+        // $ 就是jQuery的象征
+        // $ 本质就是函数,只不过这个函数名就是($)
+        // $(document).ready(function(){
+        //     // 获取标签和css样式匹配标签的规则一样
+        //     // 以后使用jQuery,变量名都要以$开头
+        //     var $div = $('#div1');
+        //     alert($div)
+        // })
+
+        // jQuery的简写
+        $(function(){
+            var $div = $('#div1');
+            alert($div);
+        });
+        // ready:等待页面标签加载完成以后就执行ready时间,不会等待资源数据加载完成
+    </script>
+</head>
+<body>
+    <div id="div1">哈哈</div>
+</body>
+</html>

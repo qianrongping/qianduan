@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    function fnShow(){
+        // 局部变量
+        var iNum =1;
+        alert(iNum)
+    }
+    // 调用函数
+    fnShow()
+
+    // 全局变量
+    var iNum = 1;
+    function fnModify(){
+        alert(iNum);
+        iNum = 3;
+        alert(iNum);
+        iNum++;
+        alert(iNum)
+    }
+    fnModify()
+    alert(iNum)
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

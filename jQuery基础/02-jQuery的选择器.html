@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.js"></script>
+
+    <script>
+        $(function(){
+            // 获取标签对象
+            var $p = $('p');
+            // alert($p.length);
+            //  通过jquery设置标签的样式
+            $p.css({'color':'red'});
+
+            // var $div = $('.div1');
+            // alert($div.length);
+
+            // var $div1 = $('#box1');
+            // alert($div1.length);
+
+            // var $h3 = $('div h3');
+            // alert($h3.length)
+
+            var $input = $('input[type=text]');
+            alert($input.length)
+        })
+    </script>
+</head>
+<body>
+    <p>啊哈哈</p>
+
+    <div class="div1">嘻嘻</div>
+
+    <div id="box1">呵呵</div>
+
+    <div>
+        <h3></h3>
+    </div>
+
+    <input type="text" >
+    <input type="button" >
+</body>
+</html>
