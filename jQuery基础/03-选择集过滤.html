@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.js"></script>
+
+    <script>
+        $(function(){
+            //通过jQuery选择器获取html标签
+            var $divs = $('div');
+            // 获取包含指定选择器的父标签
+            $divs.has('.pname').css({'background':'red'});
+            // 根据下标选择指定的标签
+            $divs.eq(1).css({'background':'blue'});
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <p class="pname">哈哈</p>
+
+    </div>
+    <div>
+        <input type="button" value="按钮">
+    </div>
+</body>
+</html>
