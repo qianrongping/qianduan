@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- json数据格式有两种:
+    1.对象格式
+    2.数组格式
+    -->
+
+    <script>
+        // 对象格式的json数据
+        var sJson1 = '{"name":"李四","age":"20"}';
+        // 把json格式的数据转成JavaScript对象
+        var oPerson =JSON.parse(sJson1);
+        console.log(oPerson)
+        // 获取属性数据
+        console.log(oPerson.name + oPerson.age);
+
+        // 数组格式的json数据
+        var sJson2 = '[{"name":"张三", "age":20},{"name":"王五", "age":21}]';
+        var aArray =JSON.parse(sJson2);
+        console.log(aArray);
+        // 通过下标获取指定js对象,然后通过js对象获取name属性
+        var oPerson1 = aArray[1];
+        console.log(oPerson1.name)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

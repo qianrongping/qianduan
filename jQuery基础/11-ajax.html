@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.js"></script>
+
+    <script>
+        // // 向web服务器发送ajax请求,本质上是一个http协议的请求
+        // $.ajax({
+        //     // 请求的资源地址
+        //     url: "data.json",
+        //     // 请求方式
+        //     type: "GET",
+        //     // 指定解析格式
+        //     dataType:"JSON",
+        //     // data:表示发送给web服务器的参数
+        //     data:{"name":"ls"},
+        //     // 请求成功执行的函数
+        //     success:function(data){
+        //          console.log(data.name);
+        //         //
+        //     },
+        //     // 请求失败执行的函数
+        //     error:function(){
+        //         alert("请求失败");
+        //     },
+        //     // 是否使用异步,默认是
+        //     async:true
+
+        // });
+
+        //  发送get方式的ajax请求的简写方式
+        //  1. 请求的地址
+        //  2. 请求传给web服务器的参数
+        //  3. 请求成功的回调函数
+        //  4. 返回数据的解析方式
+        //  5. error 失败执行的回调函数
+        $.get("data.json",{"name":"ls"},function(data){
+            alert(data.name);
+        },"JSON").error(function(){
+            alert("请求错误");
+        });
+
+        $.post("data.json",{"name":"ls"},function(data){
+            alert(data.name);
+        },"JSON").error(function(){
+            alert("请求错误");
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

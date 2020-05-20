@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.js"></script>
+    <!-- 事件冒泡,就是事件会一级一级往上(父控件)传递 -->
+    <script>
+        $(function(){
+            // 获取标签
+            var $btn = $('#btn1');
+            var $div = $('div');
+            $btn.click(function(){
+                alert('我是按钮')
+                return falsse;
+            });
+
+            // $div.click(function(){
+            //     alert("我是div");
+            // });
+
+            // 通过事件代理,让父控件代理子控件的时间,人挪活执行子控件的相关操作
+            var $ul = $('div ul');
+            $ul.delegate('li,#p2','click',function(){
+                $(this).css({"color":"red"});
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div>
+        <p id="p1">哈哈</p>
+        <input type="button" value="按钮" id="btn1">
+        <ul>
+            <li>哈哈</li>
+            <li>嘻嘻</li>
+            <li>拉拉</li>
+            <p id="p2">我是p标签</p>
+        </ul>
+    </div>
+
+</body>
+</html>
